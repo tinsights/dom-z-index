@@ -5,7 +5,7 @@
   },
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
-  "editor.minimap.enabled": false,
+  "editor.minimap.enabled": true,
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
   "eslint.format.enable": true,

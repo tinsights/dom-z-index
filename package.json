@@ -1,21 +1,21 @@
 {
-  "name": "tictactoe-bootcamp",
+  "name": "dom-starter--bootcamp",
   "version": "1.0.0",
-  "description": "SWE1 Tic Tac Toe",
+  "description": "DOM Starter Bootcamp",
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rocketacademy/tictactoe-bootcamp.git"
+    "url": "git+https://github.com/rocketacademy/dom-starter-bootcamp.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rocketacademy/tictactoe-bootcamp/issues"
+    "url": "https://github.com/rocketacademy/dom-starter-bootcamp/issues"
   },
-  "homepage": "https://github.com/rocketacademy/tictactoe-bootcamp#readme",
+  "homepage": "https://github.com/rocketacademy/dom-starter-bootcamp#readme",
   "devDependencies": {
     "eslint": "^7.6.0",
     "eslint-config-airbnb-base": "^14.2.0",
