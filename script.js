@@ -9,13 +9,15 @@ let gridSize = 0;
 // create and append buttons
 for(let i = 0; i < emojiArr.length; i+=1) {
   const button = document.createElement('button');
+  button.className = 'button'
   button.innerText = emojiArr[i];
   button.addEventListener('click', () => {emoji = emojiArr[i]});
   document.body.appendChild(button);
 }
 // add random button and listener
 const randomButton = document.createElement('button');
-randomButton.innerText = 'Random?';
+randomButton.innerText = '❔';
+randomButton.className = 'button'
 document.body.appendChild(randomButton);
 randomButton.addEventListener('click', () => {createRandomEmoji()})
 
