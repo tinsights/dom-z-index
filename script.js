@@ -4,6 +4,7 @@ const emojiArr = ["✌","😂","😝","😁","😱","👉","🙌","🍻","🔥",
 // create global scope variables
 const para = document.createElement('p');
 let emoji = '';
+let gridSize = 0;
 
 // create and append buttons
 for(let i = 0; i < emojiArr.length; i+=1) {
@@ -17,10 +18,20 @@ for(let i = 0; i < emojiArr.length; i+=1) {
 document.body.appendChild(para);
 
 // add listener to define size of grid
-document.addEventListener('keypress', (kb) => {createEmojiGrid(emoji, kb.key)})
+document.addEventListener('keydown', (e) => {createEmojiGrid(emoji, e.key)})
 
 // create emoji grid
-function createEmojiGrid(emoji, gridSize) {
+function createEmojiGrid(emoji, keyPressed) {
+  console.log(keyPressed);
+  if (keyPressed === "ArrowUp") {
+    gridSize += 1;
+  }
+  else if (keyPressed == "ArrowDown") {
+    gridSize = gridSize === 0 ?  0 : gridSize - 1;
+  }
+  else {
+    gridSize = keyPressed;
+  }
   para.innerText = "";
   for(let j = 0; j < gridSize; j +=1) {
     
@@ -29,5 +40,6 @@ function createEmojiGrid(emoji, gridSize) {
     }
     para.innerHTML += '<br>';
   }
+   console.log(gridSize)
 }
-
+const randomButton = document.createElement('button');
