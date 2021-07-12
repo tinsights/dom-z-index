@@ -13,6 +13,11 @@ for(let i = 0; i < emojiArr.length; i+=1) {
   button.addEventListener('click', () => {emoji = emojiArr[i]});
   document.body.appendChild(button);
 }
+// add random button and listener
+const randomButton = document.createElement('button');
+randomButton.innerText = 'Random?';
+document.body.appendChild(randomButton);
+randomButton.addEventListener('click', () => {createRandomEmoji()})
 
 // emojis to be displayed below buttons
 document.body.appendChild(para);
@@ -22,7 +27,6 @@ document.addEventListener('keydown', (e) => {createEmojiGrid(emoji, e.key)})
 
 // create emoji grid
 function createEmojiGrid(emoji, keyPressed) {
-  console.log(keyPressed);
   if (keyPressed === "ArrowUp") {
     gridSize += 1;
   }
@@ -40,6 +44,10 @@ function createEmojiGrid(emoji, keyPressed) {
     }
     para.innerHTML += '<br>';
   }
-   console.log(gridSize)
 }
-const randomButton = document.createElement('button');
+
+const createRandomEmoji = () => {
+  emoji = emojiArr[Math.floor(Math.random() * emojiArr.length)];
+  gridSize = Math.ceil(Math.random() * 10);
+  createEmojiGrid(emoji, gridSize);
+}
