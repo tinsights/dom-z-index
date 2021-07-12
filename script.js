@@ -24,26 +24,3 @@ function buttonPress(emoji, para) {
   }
 }
 
-// create buttons
-// const buttonOne = document.createElement('button');
-// buttonOne.innerText = '😎';
-// const buttonTwo = document.createElement('button');
-// buttonTwo.innerText = '🚀';
-// const buttonThree = document.createElement('button');
-// buttonThree.innerText = '🐵';
-
-// Create one par element to be reused
-
-// append para to body for future linebreak addition
-
-
-// append buttons to doc
-// document.body.appendChild(buttonOne)
-// document.body.appendChild(buttonTwo)
-// document.body.appendChild(buttonThree)
-
-// listener to buttons
-// buttonOne.addEventListener('click',  () => {buttonPress('😎', para)});
-// buttonTwo.addEventListener('click',  () => {buttonPress('🚀', para)});
-// buttonThree.addEventListener('click',  () => {buttonPress('🐵', para)});
-
