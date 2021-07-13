@@ -2,7 +2,6 @@
 const emojiArr = ["✌","😂","😝","😁","😱","👉","🙌","🍻","🔥","🌈","☀","🎈","🌹","💄","🎀","⚽","🎾","🏁","😡","👿","🐻","🐶","🐬","🐟","🍀","👀","🚗","🍎","💝","💙","👌","❤","😍","😉","😓","😳","💪","💩","🍸","🔑","💖","🌟","🎉","🌺","🎶","👠","🏈","⚾","🏆","👽","💀","🐵","🐮","🐩","🐎","💣","👃","👂","🍓","💘","💜","👊","💋","😘","😜","😵","🙏","👋","🚽","💃","💎","🚀","🌙","🎁","⛄","🌊","⛵","🏀","🎱","💰","👶","👸","🐰","🐷","🐍","🐫","🔫","👄","🚲","🍉","💛","💚"];
 
 // create global scope variables
-const para = document.createElement('p');
 let emoji = '';
 let gridSize = 0;
 
@@ -21,9 +20,6 @@ randomButton.className = 'button'
 document.body.appendChild(randomButton);
 randomButton.addEventListener('click', () => {createRandomEmoji()})
 
-// emojis to be displayed below buttons
-document.body.appendChild(para);
-
 // add listener to define size of grid
 document.addEventListener('keydown', (e) => {createEmojiGrid(emoji, e.key)})
 
@@ -38,7 +34,11 @@ function createEmojiGrid(emoji, keyPressed) {
   else {
     gridSize = keyPressed;
   }
-  para.innerText = "";
+  const para = document.createElement('p')
+  para.style.position = "absolute";
+  para.style.zIndex = gridSize;
+  // emojis to be displayed below buttons
+  document.body.appendChild(para);
   for(let j = 0; j < gridSize; j +=1) {
     
     for(let i = 0; i < gridSize; i +=1) {
